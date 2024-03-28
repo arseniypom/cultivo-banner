@@ -2,18 +2,20 @@
 
 import { Banner } from '@/components/Banner/Banner'
 import { ContactFormDialog } from '@/components/ContactFormDialog'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './page.module.css'
 
 export default function Home() {
   const [contactFormOpen, setContactFormOpen] = useState(false)
-  const [isFormSubmitted, setFormSubmitted] = useState(() => {
+  const [isFormSubmitted, setFormSubmitted] = useState(false)
+
+  useEffect(() => {
     if (typeof window !== 'undefined') {
       const isSubmitted =
-        window?.localStorage.getItem('isFormSubmitted') === 'true'
-      return isSubmitted
+        window.localStorage.getItem('isFormSubmitted') === 'true'
+      setFormSubmitted(isSubmitted)
     }
-  })
+  }, [])
 
   const openContactForm = () => setContactFormOpen(true)
   const closeContactForm = () => setContactFormOpen(false)
@@ -26,7 +28,7 @@ export default function Home() {
 
   const bannerContent = isFormSubmitted ? (
     <p>
-      F We received your messge. Please feel free to get in touch again if you
+      We received your messge. Please feel free to get in touch again if you
       would like to include any further details or ask any other questions. We
       are eager to assist you.
     </p>
