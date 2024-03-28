@@ -20,7 +20,6 @@ export default function Home() {
   const openContactForm = () => setContactFormOpen(true)
   const closeContactForm = () => setContactFormOpen(false)
   const handleFormSubmitted = (message: string) => {
-    console.log('Form submitted with message:', message)
     localStorage.setItem('isFormSubmitted', 'true')
     localStorage.setItem('formMessage', message)
     setFormSubmitted(true)
