@@ -85,7 +85,11 @@
 
 .placeholder {
   flex: 1;
-  height: 100%; 
+  height: 100%;
   display: flex;
   align-items: center;
+}
+
+.bannerContent ul {
+  margin-top: 16px;
 }
