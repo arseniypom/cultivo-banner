@@ -1,0 +1,20 @@
+.button {
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+  font-family: var(--font-montserrat);
+  text-transform: none;
+
+  font-weight: 500;
+  font-size: var(--text-sm);
+  line-height: var(--standard-line-height);
+}
+
+.button.primary {
+  background-color: #fff;
+  color: var(--button-primary-color);
+}
+
+.button.primary:hover {
+  background-color: #e1f8fb;
+  color: var(--button-primary-hover-color);
+}
