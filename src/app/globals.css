@@ -4,7 +4,6 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-  --font-montserrat: 'Montserrat';
 
   --text-sm: 16px;
   --text-md: 24px;
@@ -49,8 +48,6 @@
   --text-color: #fff;
   --button-primary-color: #008096;
   --button-primary-hover-color: #005563;
-
-  /* --bg-color: #003e49; */
 }
 
 * {
